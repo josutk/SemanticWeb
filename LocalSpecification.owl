@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/localespecificationdf/"
+     xml:base="http://www.semanticweb.org/localespecificationdf/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/localespecificationdf/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/hasCep -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/hasCep">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasCep"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Schools"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasCep"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Cep"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/hasName -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/hasName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/hasRegionalAdministration -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/hasRegionalAdministration">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasRegionalAdministration"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Schools"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasRegionalAdministration"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/schoolName -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/schoolName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/hasName"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/schoolName"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Schools"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/schoolName"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Name"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/AdministrativeRegion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/localespecificationdf/Local"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/localespecificationdf/Name"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/Cep -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/Cep">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/localespecificationdf/Local"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/ClassId -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/ClassId">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/localespecificationdf/SchoolOffer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/ClassType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/ClassType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/localespecificationdf/SchoolOffer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/Course -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/Course">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/localespecificationdf/SchoolOffer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/FullAdress -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/FullAdress">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/localespecificationdf/Schools"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/Local -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/Local"/>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/Name -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/Name">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/localespecificationdf/Local"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/PublicPlace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/PublicPlace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/localespecificationdf/Schools"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/RegionalCoordination -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/RegionalCoordination">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/localespecificationdf/Schools"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/SchoolId -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/SchoolId">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/localespecificationdf/Schools"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/SchoolOffer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/SchoolOffer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/localespecificationdf/Schools"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/Schools -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/Schools"/>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/Serie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/Serie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/localespecificationdf/SchoolOffer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/Shift -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/Shift">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/localespecificationdf/SchoolOffer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/TypeSchool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/TypeSchool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/localespecificationdf/Schools"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/ClassId"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/ClassType"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/Course"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/Serie"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/Shift"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
