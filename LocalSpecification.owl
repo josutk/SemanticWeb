@@ -52,7 +52,7 @@
         </rdfs:domain>
         <rdfs:range>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasYear"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasCityOccurrence"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
             </owl:Restriction>
         </rdfs:range>
