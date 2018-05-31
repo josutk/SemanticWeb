@@ -40,10 +40,50 @@
     
 
 
+    <!-- http://www.semanticweb.org/localespecificationdf/hasCityOccurrence -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/hasCityOccurrence">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/securityStatus"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasCityOccurrence"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/TypeOfOccurrence"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasYear"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/localespecificationdf/hasName -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/hasName">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/hasNumberOfOccurrence -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/hasNumberOfOccurrence">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/securityStatus"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasNumberOfOccurrence"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/TypeOfOccurrence"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasNumberOfOccurrence"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/OcorrenceNumber"/>
+            </owl:Restriction>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -62,6 +102,26 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasRegionalAdministration"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/hasYear -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/hasYear">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/securityStatus"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasYear"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/TypeOfOccurrence"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasYear"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/YearRegistration"/>
             </owl:Restriction>
         </rdfs:range>
     </owl:ObjectProperty>
@@ -112,14 +172,6 @@
     <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/localespecificationdf/Local"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/localespecificationdf/Name"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/AdministrativeRegionOfOccurrence -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/AdministrativeRegionOfOccurrence">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/localespecificationdf/Security"/>
     </owl:Class>
     
 
@@ -244,7 +296,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/OcorrenceNumber">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/localespecificationdf/Security"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/localespecificationdf/YearRegistration"/>
     </owl:Class>
     
 
@@ -368,11 +419,43 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/Assault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/BusTheft"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/CarThelf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/CrimesAgainstProperty"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/Homicides"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/InjuryFollowedByDeath"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/LethalIntentionalViolentCrimes"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/Robbery"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/SexualViolence"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/StoreThelf"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/ClassId"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/ClassType"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/Course"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/Serie"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/Shift"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/Health"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/Local"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/Schools"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/Security"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/OcorrenceNumber"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/TypeOfOccurrence"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/YearRegistration"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
