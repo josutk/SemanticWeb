@@ -770,14 +770,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/localespecificationdf/Brasilia -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/Brasilia">
-        <rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/localespecificationdf/BrasiliaOcorrencia2011 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/BrasiliaOcorrencia2011">
@@ -832,10 +824,244 @@
     
 
 
-    <!-- http://www.semanticweb.org/localespecificationdf/Gama -->
+	    
+	<!--http://www.semanticweb.org/localespecificationdf/RA 01_BRASILIA-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_01_BRASILIA">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/Gama">
-        <rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 02_GAMA-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_02_GAMA">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 03_TAGUATINGA-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_03_TAGUATINGA">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 04_BRAZLANDIA-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_04_BRAZLANDIA">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 05_SOBRADINHO-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_05_SOBRADINHO">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 06_PLANALTINA-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_06_PLANALTINA">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 07_PARANOA-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_07_PARANOA">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 08_NUCLEO BANDEIRANTE-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_08_NUCLEOBANDEIRANTE">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 09_CEILANDIA-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_09_CEILANDIA">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 10_GUARA-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_10_GUARA">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 11_CRUZEIRO-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_11_CRUZEIRO">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 12_SAMAMBAIA-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_12_SAMAMBAIA">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 13_SANTA MARIA-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_13_SANTAMARIA">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 14_SAO SEBASTIAO-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_14_SAOSEBASTIAO">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 15_RECANTO DAS EMAS-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_15_RECANTODASEMAS">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 16_LAGO SUL-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_16_LAGOSUL">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 17_RIACHO FUNDO-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_17_RIACHOFUNDO">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 18_LAGO NORTE-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_18_LAGONORTE">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 19_CANDANGOLANDIA-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_19_CANDANGOLANDIA">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 20_AGUAS CLARAS-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_20_AGUASCLARAS">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 21_RIACHO FUNDO 2-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_21_RIACHOFUNDO2">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 22_SUDOESTE-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_22_SUDOESTE">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 23_VARJAO DO TORTO-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_23_VARJAODOTORTO">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 24_PARK WAY-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_24_PARKWAY">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 25_ESTRUTURAL-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_25_ESTRUTURAL">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 26_SOBRADINHO 2-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_26_SOBRADINHO2">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 27_JARDIM BOTANICO-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_27_JARDIMBOTANICO">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 28_ITAPOA-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_28_ITAPOA">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 29_SIA*-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_29_SIA*">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 30_VICENTE PIRES-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_30_VICENTEPIRES">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+	<!--http://www.semanticweb.org/localespecificationdf/RA 31_FERCAL-->
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RA_31_FERCAL">
+		<rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/AdministrativeRegion"/>
+	</owl:NamedIndividual>
+
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/GamaOcorrencia2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/GamaOcorrencia2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/OcorrenceNumber"/>
+        <ocurrenceCarThelf rdf:datatype="http://www.w3.org/2001/XMLSchema#int">330</ocurrenceCarThelf>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/GamaOcorrencia2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/GamaOcorrencia2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/OcorrenceNumber"/>
+        <ocurrenceCarThelf rdf:datatype="http://www.w3.org/2001/XMLSchema#int">294</ocurrenceCarThelf>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/GamaOcorrencia2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/GamaOcorrencia2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/OcorrenceNumber"/>
+        <ocurrenceCarThelf rdf:datatype="http://www.w3.org/2001/XMLSchema#int">472</ocurrenceCarThelf>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/GamaOcorrencia2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/GamaOcorrencia2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/OcorrenceNumber"/>
+        <ocurrenceCarThelf rdf:datatype="http://www.w3.org/2001/XMLSchema#int">531</ocurrenceCarThelf>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/GamaOcorrencia2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/GamaOcorrencia2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/OcorrenceNumber"/>
+        <ocurrenceCarThelf rdf:datatype="http://www.w3.org/2001/XMLSchema#int">516</ocurrenceCarThelf>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/GamaOcorrencia2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/GamaOcorrencia2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/OcorrenceNumber"/>
+        <ocurrenceCarThelf rdf:datatype="http://www.w3.org/2001/XMLSchema#int">434</ocurrenceCarThelf>
     </owl:NamedIndividual>
     
 
@@ -844,8 +1070,33 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RouboDeCarroBrasilia">
         <rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/CarThelf"/>
-        <hasCityOccurrence rdf:resource="http://www.semanticweb.org/localespecificationdf/Brasilia"/>
-        <hasCityOccurrence rdf:resource="http://www.semanticweb.org/localespecificationdf/Gama"/>
+        <hasCityOccurrence rdf:resource="http://www.semanticweb.org/localespecificationdf/RA_01_BRASILIA"/>
+        <hasNumberOfOccurrence rdf:resource="http://www.semanticweb.org/localespecificationdf/BrasiliaOcorrencia2011"/>
+        <hasNumberOfOccurrence rdf:resource="http://www.semanticweb.org/localespecificationdf/BrasiliaOcorrencia2012"/>
+        <hasNumberOfOccurrence rdf:resource="http://www.semanticweb.org/localespecificationdf/BrasiliaOcorrencia2014"/>
+        <hasNumberOfOccurrence rdf:resource="http://www.semanticweb.org/localespecificationdf/BrasiliaOcorrencia2015"/>
+        <hasNumberOfOccurrence rdf:resource="http://www.semanticweb.org/localespecificationdf/BrasiliaOcorrencia2016"/>
+        <hasYear rdf:resource="http://www.semanticweb.org/localespecificationdf/Ano2011"/>
+        <hasYear rdf:resource="http://www.semanticweb.org/localespecificationdf/Ano2012"/>
+        <hasYear rdf:resource="http://www.semanticweb.org/localespecificationdf/Ano2013"/>
+        <hasYear rdf:resource="http://www.semanticweb.org/localespecificationdf/Ano2014"/>
+        <hasYear rdf:resource="http://www.semanticweb.org/localespecificationdf/Ano2015"/>
+        <hasYear rdf:resource="http://www.semanticweb.org/localespecificationdf/Ano2016"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/RouboDeCarroGama -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/RouboDeCarroGama">
+        <rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/CarThelf"/>
+        <hasNumberOfOccurrence rdf:resource="http://www.semanticweb.org/localespecificationdf/GamaOcorrencia2011"/>
+        <hasNumberOfOccurrence rdf:resource="http://www.semanticweb.org/localespecificationdf/GamaOcorrencia2012"/>
+        <hasNumberOfOccurrence rdf:resource="http://www.semanticweb.org/localespecificationdf/GamaOcorrencia2013"/>
+        <hasNumberOfOccurrence rdf:resource="http://www.semanticweb.org/localespecificationdf/GamaOcorrencia2014"/>
+        <hasNumberOfOccurrence rdf:resource="http://www.semanticweb.org/localespecificationdf/GamaOcorrencia2015"/>
+        <hasNumberOfOccurrence rdf:resource="http://www.semanticweb.org/localespecificationdf/GamaOcorrencia2016"/>
+        <hasRegionalAdministration rdf:resource="http://www.semanticweb.org/localespecificationdf/RA_02_GAMA"/>
         <hasYear rdf:resource="http://www.semanticweb.org/localespecificationdf/Ano2011"/>
         <hasYear rdf:resource="http://www.semanticweb.org/localespecificationdf/Ano2012"/>
         <hasYear rdf:resource="http://www.semanticweb.org/localespecificationdf/Ano2013"/>
