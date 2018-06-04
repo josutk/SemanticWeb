@@ -1,0 +1,5 @@
+FROM node:9
+WORKDIR /code
+COPY ./morar-bem-front /code
+RUN npm install -g create-react-app
+RUN npm install

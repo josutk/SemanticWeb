@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  jena:
+    container_name: jena
+    build:
+      context: .
+      dockerfile: scripts/Dockerfile-jena
+    command: ./fuseki-server --update --desc=./tdb/tdb.ttl /morarBem
+    ports:
+      - 3030:3030
+    volumes:
+      - ./tdb:/jena-fuseki/tdb
+    environment:
+      - ADMIN_PASSWORD=SW123
+
+  front:
+    container_name: front
+    build:
+      context: .
+      dockerfile: scripts/Dockerfile-front
+    working_dir: /code
+    command: bash -c "npm install && npm start"
+    ports:
+      - 3000:3000
+    depends_on:
+      - jena
+    volumes:
+      - ./morar-bem-front:/code
+      - /code/node_modules
