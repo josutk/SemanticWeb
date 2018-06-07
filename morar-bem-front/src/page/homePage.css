@@ -1,5 +1,22 @@
 
 #search-button{
+  margin-top: -12%;
+  margin-left: 35%;
+}
+
+.offers{
   margin-top: 20%;
-  margin-left: 45%;
+  margin-right: 10%;
+  margin-left: 13%;
+}
+
+.price{
+  margin-top: 3%;
+  margin-left: 13%
+}
+
+
+.price2{
+  margin-top: -4%;
+  margin-left: 61%
 }
