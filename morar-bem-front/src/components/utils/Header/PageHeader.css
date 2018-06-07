@@ -1,0 +1,15 @@
+.navbar{
+  background-color: #339897;
+  border-color: #339897;
+  margin: 0px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+}
+
+.head .navbar-brand{
+    color: black;
+}
+
+#navbar-menu .nav-link{
+    color: black;
+}

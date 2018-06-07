@@ -1,11 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Header from './pageComponent/header.js'
-import Footer from './pageComponent/footer.js'
-import Home from './page/homePage.js'
+import { BrowserRouter } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
+import routes from './routes';
 
-ReactDOM.render(<Home />, document.getElementById('root'));
 
+const Router = () => (
+  <BrowserRouter>
+    {routes}
+  </BrowserRouter>
+);
+
+ReactDOM.render(<Router />, document.getElementById('content'));
 registerServiceWorker();
