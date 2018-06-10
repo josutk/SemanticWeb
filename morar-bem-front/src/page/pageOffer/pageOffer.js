@@ -9,6 +9,8 @@ class PageOffer extends Component {
       <div>
         <Header />
         <OffersComponent/>
+        <OffersComponent/>  
+        <OffersComponent/>
       </div>
 
     );
