@@ -13,7 +13,6 @@ class OffersComponent extends Component {
               Descrição a cerca da casa
             </p>
           </div>
-          <a href="#" class="btn btn-primary">Mais informações</a>
        </div>
 
     );
