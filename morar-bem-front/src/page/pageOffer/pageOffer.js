@@ -8,7 +8,8 @@ import OffersInfo from '../../offer/offerInfo'
 class PageOffer extends Component {
   render() {
     return (
-      <div>
+      <body class="body">
+        <div>
         <Header />
 
         <OffersComponent/>
@@ -24,7 +25,7 @@ class PageOffer extends Component {
           <OffersInfo />
         </div>
       </div>
-
+    </body>
     );
   }
 }
