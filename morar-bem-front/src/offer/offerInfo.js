@@ -7,12 +7,12 @@ class OffersInfo extends Component {
       <div>
        <div class="card-infos">
          <div class="card-header">
-           Informações da região 
-         </div>
+           <font color="#3AC7DF">Informações da região</font>
+          </div>
          <ul class="list-group list-group-flush">
-           <li class="list-group-item">Escolas</li>
-           <li class="list-group-item">Segurança</li>
-           <li class="list-group-item">Saude</li>
+           <li class="list-group-item"><font color="#3AC7DF">Escolas</font></li>
+           <li class="list-group-item"><font color="#3AC7DF">Segurança</font></li>
+           <li class="list-group-item"><font color="#3AC7DF">Saúde</font></li>
          </ul>
         </div>
        </div>
