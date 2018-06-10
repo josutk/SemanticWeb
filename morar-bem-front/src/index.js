@@ -6,7 +6,7 @@ import Footer from './pageComponent/footer.js'
 import Home from './page/homePage.js'
 import registerServiceWorker from './registerServiceWorker';
 import OffersComponent from './offer/offerComponent'
-import PageOffer from './offer/offerComponent'
-ReactDOM.render(<OffersComponent />, document.getElementById('root'));
+import PageOffer from './page/pageOffer/pageOffer'
+ReactDOM.render(<PageOffer />, document.getElementById('root'));
 
 registerServiceWorker();
