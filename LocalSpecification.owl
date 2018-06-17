@@ -21,6 +21,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/localespecificationdf/educationProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/educationProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/localespecificationdf/hasAdress -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/hasAdress">
@@ -219,6 +227,32 @@
     
 
 
+    <!-- http://www.semanticweb.org/localespecificationdf/hasCity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/hasCity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/localProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/EducationLocal"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/HealthPoint"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/House"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/Local"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/RecreationPoint"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/TypeOfOccurrence"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/UrbanMobility"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/localespecificationdf/City"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/hasCourse -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/hasCourse">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/educationProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/College"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/localespecificationdf/Course"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/localespecificationdf/hasName -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/hasName">
@@ -322,7 +356,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/hasOccurrenceNumber">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/securityProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/OcorrenceNumber"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/localespecificationdf/TypeOfOccurrence"/>
     </owl:ObjectProperty>
@@ -376,33 +409,14 @@
     
 
 
-    <!-- http://www.semanticweb.org/localespecificationdf/id -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/id">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/schoolData"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.semanticweb.org/localespecificationdf/literalForSchool -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/literalForSchool">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/schoolData"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/ClassType"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/Course"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/FullAdress"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/Serie"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/Shift"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/localAdministrativeRegion -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/localAdministrativeRegion">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/localData"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -431,6 +445,11 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/localName">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/localData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/EducationLocal"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/HealthPoint"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/Local"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/RecreationPoint"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/UrbanMobility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -440,6 +459,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/numberOfOccurrence">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/securityData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/OcorrenceNumber"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
@@ -556,6 +576,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/yearOfRegistration">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/securityData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/YearRegistration"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
