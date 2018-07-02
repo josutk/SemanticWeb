@@ -21,267 +21,61 @@
     
 
 
-    <!-- http://www.semanticweb.org/localespecificationdf/educationProperty -->
+    <!-- http://www.semanticweb.org/localespecificationdf/hasExternalIndicator -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/educationProperty">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/hasExternalIndicator">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/homeProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/Home"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/localespecificationdf/ExternalIndicator"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/localespecificationdf/hasAdress -->
+    <!-- http://www.semanticweb.org/localespecificationdf/hasLocation -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/hasAdress">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/localProperty"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasAdress"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/BusStation"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasAdress"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Cinema"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasAdress"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/College"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasAdress"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Course"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasAdress"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Park"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasAdress"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Pub"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasAdress"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Restaurant"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasAdress"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Schools"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasAdress"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Shopping"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasAdress"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/SubwayStation"/>
-            </owl:Restriction>
-        </rdfs:domain>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/hasLocation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/locationProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/Place"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/localespecificationdf/Location"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/localespecificationdf/hasCep -->
+    <!-- http://www.semanticweb.org/localespecificationdf/hasRoom -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/hasCep">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/localProperty"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasCep"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/BusStation"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasCep"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Cinema"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasCep"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/College"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasCep"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Course"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasCep"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Park"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasCep"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Pub"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasCep"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Restaurant"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasCep"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Schools"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasCep"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Shopping"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasCep"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/SubwayStation"/>
-            </owl:Restriction>
-        </rdfs:domain>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/hasRoom">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/homeProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/Home"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/localespecificationdf/Room"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/localespecificationdf/hasCity -->
+    <!-- http://www.semanticweb.org/localespecificationdf/homeProperty -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/hasCity">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/localProperty"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/homeProperty"/>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/isLocatedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/isLocatedAt">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/locationProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/Crime"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/EducationPoint"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/HealthPoint"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/Home"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/MobilityPoint"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/RecreationPoint"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/UrbanMobility"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/localespecificationdf/Place"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/localespecificationdf/hasCourse -->
+    <!-- http://www.semanticweb.org/localespecificationdf/locationProperty -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/hasCourse">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/educationProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/College"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/localespecificationdf/Course"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/hasName -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/hasName">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/localProperty"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasName"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/BusStation"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasName"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Cinema"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasName"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/College"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasName"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Course"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasName"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Park"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasName"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Pub"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasName"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Restaurant"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasName"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Schools"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasName"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/Shopping"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/localespecificationdf/hasName"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/localespecificationdf/SubwayStation"/>
-            </owl:Restriction>
-        </rdfs:domain>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/hasOccurrenceNumber -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/hasOccurrenceNumber">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/securityProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/hasYear -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/hasYear">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/securityProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/localProperty -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/localProperty">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/securityProperty -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/securityProperty">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/localespecificationdf/locationProperty"/>
     
 
 
@@ -296,253 +90,263 @@
     
 
 
-    <!-- http://www.semanticweb.org/localespecificationdf/booleanSchool -->
+    <!-- http://www.semanticweb.org/localespecificationdf/cep -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/booleanSchool">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/schoolData"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/literalForSchool -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/literalForSchool">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/schoolData"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/Course"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/cep">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/locationData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/Location"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/localespecificationdf/localCep -->
+    <!-- http://www.semanticweb.org/localespecificationdf/cityName -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/localCep">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/localData"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/cityName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/locationData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/localespecificationdf/localData -->
+    <!-- http://www.semanticweb.org/localespecificationdf/countryName -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/localData">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/countryName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/locationData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/localespecificationdf/localName -->
+    <!-- http://www.semanticweb.org/localespecificationdf/crimeData -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/localName">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/localData"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/crimeData"/>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/crimeRate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/crimeRate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/crimeData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/Crime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/crimeRawQuantity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/crimeRawQuantity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/crimeData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/Crime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/crimeYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/crimeYear">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/crimeData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/Crime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/educationData -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/educationData"/>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/educationPointCourse -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/educationPointCourse">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/educationData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/EducationPoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/educationPointName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/educationPointName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/educationData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/EducationPoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/educationPointShift -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/educationPointShift">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/educationData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/EducationPoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/educationPointType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/educationPointType">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/educationData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/EducationPoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/healthData -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/healthData"/>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/healthPointName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/healthPointName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/healthData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/HealthPoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/healthPointRating -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/healthPointRating">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/healthData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/HealthPoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/homeData -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/homeData"/>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/homeMeasurement -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/homeMeasurement">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/homeData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/latitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/latitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/locationData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/locationData -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/locationData"/>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/longitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/longitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/locationData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/mobilityData -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/mobilityData"/>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/mobilityPointDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/mobilityPointDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/mobilityData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/MobilityPoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/recreationData -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/recreationData"/>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/recreationPointName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/recreationPointName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/recreationData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/RecreationPoint"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/UrbanMobility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/localespecificationdf/numberOfOccurrence -->
+    <!-- http://www.semanticweb.org/localespecificationdf/recreationPointRating -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/numberOfOccurrence">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/securityData"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/recreationPointRating">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/recreationData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/RecreationPoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/localespecificationdf/occurrenceName -->
+    <!-- http://www.semanticweb.org/localespecificationdf/roomData -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/occurrenceName">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/securityData"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/roomData"/>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/roomName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/roomName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/roomData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/stateName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/stateName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/locationData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/Location"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/ocurrenceAssault -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/ocurrenceAssault">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/numberOfOccurrence"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/ocurrenceBusTheft -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/ocurrenceBusTheft">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/numberOfOccurrence"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/ocurrenceCarThelf -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/ocurrenceCarThelf">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/numberOfOccurrence"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/ocurrenceCrimesAgainstProperty -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/ocurrenceCrimesAgainstProperty">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/numberOfOccurrence"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/ocurrenceHomicides -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/ocurrenceHomicides">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/numberOfOccurrence"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/ocurrenceInjuryFollowedByDeath -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/ocurrenceInjuryFollowedByDeath">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/numberOfOccurrence"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/ocurrenceLethalIntentionalViolentCrimes -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/ocurrenceLethalIntentionalViolentCrimes">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/numberOfOccurrence"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/ocurrenceRobbery -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/ocurrenceRobbery">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/numberOfOccurrence"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/ocurrenceSexualViolence -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/ocurrenceSexualViolence">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/numberOfOccurrence"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/ocurrenceStoreThelf -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/ocurrenceStoreThelf">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/numberOfOccurrence"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/schoolData -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/schoolData">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/securityData -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/securityData">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/localespecificationdf/SecurityStatus"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/yearOfRegistration -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/yearOfRegistration">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/securityData"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/yearRegisterAssault -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/yearRegisterAssault">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/yearOfRegistration"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/yearRegisterBusTheft -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/yearRegisterBusTheft">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/yearOfRegistration"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/yearRegisterCarTheft -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/yearRegisterCarTheft">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/yearOfRegistration"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/yearRegisterCrimesAgainsProperty -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/yearRegisterCrimesAgainsProperty">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/yearOfRegistration"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/yearRegisterHomicides -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/yearRegisterHomicides">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/yearOfRegistration"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/yearRegisterInjuryFollowedByDeath -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/yearRegisterInjuryFollowedByDeath">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/yearOfRegistration"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/yearRegisterLethalIntentionalViolentCrimes -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/yearRegisterLethalIntentionalViolentCrimes">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/yearOfRegistration"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/yearRegisterRobbery -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/yearRegisterRobbery">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/yearOfRegistration"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/yearRegisterSexualViolence -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/yearRegisterSexualViolence">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/yearOfRegistration"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/localespecificationdf/yearRegisterStoreThelf -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/localespecificationdf/yearRegisterStoreThelf">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/localespecificationdf/yearOfRegistration"/>
     </owl:DatatypeProperty>
     
 
@@ -635,7 +439,7 @@
     <!-- http://www.semanticweb.org/localespecificationdf/Clinic -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/Clinic">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/localespecificationdf/Health"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/localespecificationdf/HealthPoint"/>
     </owl:Class>
     
 
@@ -705,7 +509,7 @@
     <!-- http://www.semanticweb.org/localespecificationdf/HealthCenter -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/HealthCenter">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/localespecificationdf/Health"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/localespecificationdf/HealthPoint"/>
     </owl:Class>
     
 
@@ -721,6 +525,14 @@
     <!-- http://www.semanticweb.org/localespecificationdf/Home -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/Home"/>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/Hospital -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/localespecificationdf/Hospital">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/localespecificationdf/HealthPoint"/>
+    </owl:Class>
     
 
 
@@ -975,19 +787,17 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/College"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/Course"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/Schools"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/Clinic"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/HealthCenter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/Hospital"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/Education"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/Health"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/Recreation"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/SecurityStatus"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/UrbanMobility"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/College"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/Course"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/localespecificationdf/Schools"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
