@@ -909,6 +909,18 @@
     
 
 
+    <!-- http://www.semanticweb.org/localespecificationdf/assalto1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/assalto1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/Assault"/>
+        <isLocatedAt rdf:resource="http://www.semanticweb.org/localespecificationdf/placeCrime"/>
+        <crimeRate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.0</crimeRate>
+        <crimeRawQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#double">400.0</crimeRawQuantity>
+        <crimeYear rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-21T24:00:00</crimeYear>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/localespecificationdf/bathroom1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/bathroom1">
@@ -941,6 +953,16 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/bedroom2">
         <rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/Bedroom"/>
         <roomName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bedroom2</roomName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/busStation1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/busStation1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/BusStation"/>
+        <isLocatedAt rdf:resource="http://www.semanticweb.org/localespecificationdf/placeUrbanMobility"/>
+        <mobilityPointDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parada de onibus 1</mobilityPointDescription>
     </owl:NamedIndividual>
     
 
@@ -1067,6 +1089,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/localespecificationdf/placeCrime -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/placeCrime">
+        <rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/Place"/>
+        <hasLocation rdf:resource="http://www.semanticweb.org/localespecificationdf/Location1"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/localespecificationdf/placeHospital -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/placeHospital">
@@ -1094,6 +1125,15 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/placeSchooll">
         <rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/Place"/>
         <hasLocation rdf:resource="http://www.semanticweb.org/localespecificationdf/LocationSchool"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/localespecificationdf/placeUrbanMobility -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/localespecificationdf/placeUrbanMobility">
+        <rdf:type rdf:resource="http://www.semanticweb.org/localespecificationdf/Place"/>
+        <hasLocation rdf:resource="http://www.semanticweb.org/localespecificationdf/Location2"/>
     </owl:NamedIndividual>
     
 
