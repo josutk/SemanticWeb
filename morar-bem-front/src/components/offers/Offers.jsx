@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import QueryUtils from '../utils/Utils';
 import shortid from 'shortid';
 import PropTypes from 'prop-types';
@@ -10,43 +9,14 @@ class Offers extends Component {
         super(props);
         this.state = {offers: null};
 
-        this.makeRequest = this.makeRequest.bind(this);
         this.renderOffers = this.renderOffers.bind(this);
     }
 
-    makeRequest(){
+    componentDidMount(){
+        var query_utils = new QueryUtils();
         var location = this.context.router.route.match.params.location;
         location = location.replace(/^"(.*)"$/, '$1');
-
-        var query_utils = new QueryUtils();
-        const query_prefix = query_utils.getPrefixQuery();
-
-        const query_data =
-        query_prefix +
-        "SELECT DISTINCT ?home_offer_title ?home_offer_thumbnail ?home_offer_price ?home_offer_currency ?home "+
-        "WHERE {"+
-        	"?location onto:cityName '"+ location +"'."+
-          "?place onto:hasLocation ?location."+
-
-        	"?home onto:isLocatedAt ?place."+
-        	"?home_offer onto:offers ?home."+
-
-          "?home_offer onto:homeOfferTitle ?home_offer_title."+
-          "?home_offer onto:homeOfferThumbnail ?home_offer_thumbnail."+
-          "?home_offer onto:homeOfferPrice ?home_offer_price."+
-          "?home_offer onto:homeOfferCurrency ?home_offer_currency }"
-
-
-        const params = new URLSearchParams();
-        params.append('query', query_data);
-        params.append('output', "json");
-
-
-        return axios.post('http://localhost:3030/sddss/query', params);
-    }
-
-    componentDidMount(){
-        const request = this.makeRequest()
+        const request = query_utils.makeRequest("offer", location)
         var offers = []
 
         request.then(

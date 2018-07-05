@@ -1,44 +1,27 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
 import QueryUtils from '../utils/Utils';
+import RenderUtils from '../utils/RenderUtils';
 
 class SingleOffer extends Component {
     constructor(props) {
         super(props);
-        this.state = {info: null};
+        this.state = {base_info: null,
+                      room_info: null,
+                      ext_indicator: null
+                    };
 
-        this.makeRequest = this.makeRequest.bind(this);
-    }
-
-    makeRequest(){
-        var id = this.context.router.route.match.params.id;
-
-        var query_utils = new QueryUtils();
-        const query_prefix = query_utils.getPrefixQuery();
-        const query_location = query_utils.getLocationQuery(id);
-
-        const query_data =
-        query_prefix +
-        "SELECT DISTINCT ?home_type ?home_measurement ?location_countryName ?location_stateName ?location_cityName ?location_cep ?location_latitude ?location_longitude"+
-        " WHERE {"+
-            query_location +
-            "onto:ape1 onto:homeMeasurement ?home_measurement."+
-            "onto:ape1 rdf:type ?home_type."+
-            "?home_type rdfs:subClassOf onto:Home.}"
-
-        const params = new URLSearchParams();
-        params.append('query', query_data);
-        params.append('output', "json");
-
-
-        return axios.post('http://localhost:3030/sddss/query', params);
     }
 
     componentDidMount(){
-        const request = this.makeRequest()
+        var query_utils = new QueryUtils();
+        var id = this.context.router.route.match.params.id;
+        const base_request = query_utils.makeRequest("base_info", id)
+        const room_request = query_utils.makeRequest("room_info", id)
+        const ext_indicator_request = query_utils.makeRequest("ext_indicator_info", id)
 
-        request.then(
+        //Get base infos
+        base_request.then(
             response => {
                 for (var data of response.data.results.bindings) {
                     var type = data.home_type.value.split("/");
@@ -55,21 +38,55 @@ class SingleOffer extends Component {
                         longitude: data.location_longitude.value
 
                     }
-                    this.setState({info: info})
+                    this.setState({base_info: info})
                 }
-
             }
         )
+
+        //Get room infos
+        var rooms = []
+        room_request.then(
+            response => {
+                for (var data of response.data.results.bindings) {
+                    var room = {
+                        name: data.home_room_name.value
+                    }
+                    rooms.push(room)
+                }
+                this.setState({room_info: rooms})
+            }
+        )
+
+        //Get external indicators infos
+        var ext_indicators = []
+        ext_indicator_request.then(
+            response => {
+                for (var data of response.data.results.bindings) {
+                    var type = data.ext_indicator_parent_type.value.split("/");
+                    type = type[type.length -1];
+
+                    var name = data.ext_indicator.value.split("/");
+                    name = name[name.length -1];
+
+                    var ext_indicator = {
+                        type: type,
+                        name: name
+                    }
+                    ext_indicators.push(ext_indicator)
+                }
+                this.setState({ext_indicator: ext_indicators});
+            }
+        );
     }
 
-
     render() {
-        const info = this.state.info
-        const offer = this.context.router.route.location.state.offer
-        console.log(offer);
+        const info = this.state.base_info;
+        const room = this.state.room_info;
+        const ext_indicators = this.state.ext_indicator;
+        const offer = this.context.router.route.location.state.offer;
+        var render_utils = new RenderUtils();
 
-        console.log(this);
-        if (info == null) {
+        if (info == null || ext_indicators == null) {
             return null;
         } else {
             return (
@@ -82,6 +99,8 @@ class SingleOffer extends Component {
                     <h3>Tamanho:{info.measurement} m²</h3>
                     <h3>{info.city} - {info.state}</h3>
                     <h3>Coordenadas:{info.latitude}, {info.longitude}</h3>
+
+                    {render_utils.renderExternalIndicators(ext_indicators)}
                 </div>
             );
         }

@@ -11,7 +11,7 @@ class Home extends Component {
     submitForm(event) {
         event.preventDefault();
         const searchForm = new FormData(event.target);
-        const search_url = "/offers/" + searchForm.get('search')
+        const search_url = "/search/" + searchForm.get('search')
         this.context.router.history.push(search_url);
 
     }
