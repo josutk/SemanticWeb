@@ -24,7 +24,7 @@ class QueryUtils extends Component {
                                 "?location onto:cityName ?location_cityName."+
                                 "?location onto:cep ?location_cep."+
                                 "?location onto:latitude ?location_latitude."+
-                                "?location onto:longitude ?location_longitude";
+                                "?location onto:longitude ?location_longitude.";
 
     return location_query_data
   }

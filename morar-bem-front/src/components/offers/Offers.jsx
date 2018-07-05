@@ -3,6 +3,7 @@ import axios from 'axios';
 import QueryUtils from '../utils/Utils';
 import shortid from 'shortid';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 class Offers extends Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class Offers extends Component {
     }
 
     makeRequest(){
-        var location = this.context.router.route.match.params.id;
+        var location = this.context.router.route.match.params.location;
         location = location.replace(/^"(.*)"$/, '$1');
 
         var query_utils = new QueryUtils();
@@ -61,7 +62,6 @@ class Offers extends Component {
 
                     offers.push(offer)
                 }
-                console.log("ue", offers);
                 this.setState({offers: offers})
             }
         )
@@ -70,13 +70,17 @@ class Offers extends Component {
     renderOffers(offers){
         var result = [];
         for (var offer of offers) {
+            var home = offer.home.split("/");
+            home = home[home.length -1];
+
             var key = shortid.generate()
             result.push(
                 <div key={key}>
                     <h1>{offer.title}</h1>
                     <p>Apenas {offer.price} - {offer.currency}</p>
-                    <img src={offer.thumbnail} alt="home-thumbnail"/>
-                    <div value={offer.home} />
+                    <Link to={{ pathname: '/offer/'+ home, state:{offer:offer}  }}>
+                        <img src={offer.thumbnail} alt="home-thumbnail"/>
+                    </Link>
                 </div>
                 )
 
@@ -87,13 +91,10 @@ class Offers extends Component {
 
     render() {
         const offers = this.state.offers
-        console.log(this);
-
 
         if (offers == null) {
             return null;
         } else {
-            console.log("uaat", offers);
             return (
                 <div>
                     {this.renderOffers(offers)}
