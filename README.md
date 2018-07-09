@@ -14,8 +14,8 @@ Esse projeto utiliza a plataforma [Docker](https://www.docker.com/what-docker) p
   ```
   docker-compose up
   ```
-5. Acesse a aplicação na porta `3000` do seu `localhost`: [http://localhost](http://localhost:3000) para visualizar a aplicação funcionando.
+5. Acesse a aplicação na porta `3000` do seu `localhost`: [http://localhost:3000](http://localhost:3000) para visualizar a aplicação funcionando.
 
-5. Caso queira acessar o ambiente do fuseki. Acesse a aplicação na porta `3030` do seu `localhost`: [http://localhost](http://localhost:3030)
+5. Caso queira acessar o ambiente do fuseki. Acesse a aplicação na porta `3030` do seu `localhost`: [http://localhost:3030](http://localhost:3030)
 
 **Obs**: A senha do administrador do fuseki está localizada no arquivo docker-compose.yml. Essa senha pode ser alterado, caso ache necessário.
