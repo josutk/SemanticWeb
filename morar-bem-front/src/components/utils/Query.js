@@ -1,16 +1,17 @@
 import { Component } from 'react';
 import axios from 'axios';
 
-class QueryUtils extends Component {
+class Query extends Component {
   constructor(props) {
       super(props);
 
-      this.getPrefixQuery = this.getPrefixQuery.bind(this);
-      this.getLocationQuery = this.getLocationQuery.bind(this);
-      this.makeRequest = this.makeRequest.bind(this);
+      this.API_URL = 'http://localhost:3030/sddss/query'
+      this.mountPrefixQuery = this.mountPrefixQuery.bind(this);
+      this.mountLocationQuery = this.mountLocationQuery.bind(this);
+      this.mountQuery = this.mountQuery.bind(this);
   }
 
-  getPrefixQuery(){
+  mountPrefixQuery(){
     const prefix_query_data = "PREFIX onto: <http://www.semanticweb.org/localespecificationdf/>"+
                               "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>"+
                               "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>";
@@ -18,33 +19,33 @@ class QueryUtils extends Component {
     return prefix_query_data;
   }
 
-  getLocationQuery(individual){
+  mountLocationQuery(individual){
     const location_query_data = "onto:"+ individual + " onto:isLocatedAt ?place."+
                                 "?place onto:hasLocation ?location."+
-                                "?location onto:countryName ?location_countryName."+
-                                "?location onto:stateName ?location_stateName."+
-                                "?location onto:cityName ?location_cityName."+
-                                "?location onto:cep ?location_cep."+
-                                "?location onto:latitude ?location_latitude."+
-                                "?location onto:longitude ?location_longitude.";
+                                "?location onto:countryName ?country."+
+                                "?location onto:stateName ?state."+
+                                "?location onto:cityName ?city."+
+                                "?location onto:cep ?cep."+
+                                "?location onto:latitude ?latitude."+
+                                "?location onto:longitude ?longitude.";
 
     return location_query_data
   }
 
-  makeRequest(type, arg){
+  mountQuery(type, arg){
       var query_data = "";
       var query_location = "";
 
-      const query_prefix = this.getPrefixQuery();
+      const query_prefix = this.mountPrefixQuery();
 
       if (type !== "offer") {
-          query_location = this.getLocationQuery(arg);
+          query_location = this.mountLocationQuery(arg);
       }
 
       switch (type) {
           case "offer":
                 query_data =
-                    "SELECT DISTINCT ?home_offer_title ?home_offer_thumbnail ?home_offer_price ?home_offer_currency ?home "+
+                    "SELECT DISTINCT ?title ?thumbnail ?price ?currency ?home "+
                     "WHERE {"+
                     "?location onto:cityName '"+ arg +"'."+
                     "?place onto:hasLocation ?location."+
@@ -52,37 +53,37 @@ class QueryUtils extends Component {
                     "?home onto:isLocatedAt ?place."+
                     "?home_offer onto:offers ?home."+
 
-                    "?home_offer onto:homeOfferTitle ?home_offer_title."+
-                    "?home_offer onto:homeOfferThumbnail ?home_offer_thumbnail."+
-                    "?home_offer onto:homeOfferPrice ?home_offer_price."+
-                    "?home_offer onto:homeOfferCurrency ?home_offer_currency }"
+                    "?home_offer onto:homeOfferTitle ?title."+
+                    "?home_offer onto:homeOfferThumbnail ?thumbnail."+
+                    "?home_offer onto:homeOfferPrice ?price."+
+                    "?home_offer onto:homeOfferCurrency ?currency }"
                 break;
 
               case "base_info":
                     query_data =
-                        "SELECT DISTINCT ?home_type ?home_measurement ?location_countryName ?location_stateName ?location_cityName ?location_cep ?location_latitude ?location_longitude"+
+                        "SELECT DISTINCT ?type ?measurement ?country ?state ?city ?cep ?latitude ?longitude"+
                         " WHERE {"+
                             query_location +
-                            "onto:"+ arg +" onto:homeMeasurement ?home_measurement."+
-                            "onto:"+ arg +" rdf:type ?home_type."+
-                            "?home_type rdfs:subClassOf onto:Home.}"
+                            "onto:"+ arg +" onto:homeMeasurement ?measurement."+
+                            "onto:"+ arg +" rdf:type ?type."+
+                            "?type rdfs:subClassOf onto:Home.}"
                 break
 
                 case "room_info":
                       query_data =
                         "SELECT DISTINCT * "+
                         "WHERE {"+
-                        	"onto:"+ arg +" onto:hasRoom ?home_room."+
-                        	"?home_room onto:roomName ?home_room_name}"
+                        	"onto:"+ arg +" onto:hasRoom ?type."+
+                        	"?type onto:roomName ?name}"
                   break
 
-                  case "ext_indicator_info":
+                  case "indicators_info":
                         query_data =
-                            "SELECT DISTINCT ?ext_indicator ?ext_indicator_parent_type "+
+                            "SELECT DISTINCT ?name ?type "+
                             "WHERE {"+
-                                "onto:"+ arg +" onto:hasExternalIndicator ?ext_indicator."+
-                                "?ext_indicator rdf:type ?ext_indicator_type."+
-                                "?ext_indicator_type rdfs:subClassOf ?ext_indicator_parent_type}"
+                                "onto:"+ arg +" onto:hasExternalIndicator ?name."+
+                                "?name rdf:type ?aux_type."+
+                                "?aux_type rdfs:subClassOf ?type}"
                     break
 
                     case "RecreationPoint":
@@ -143,8 +144,8 @@ class QueryUtils extends Component {
       params.append('query', query);
       params.append('output', "json");
 
-      return axios.post('http://localhost:3030/sddss/query', params);
+      return axios.post(this.API_URL, params);
   }
 
 }
-export default QueryUtils;
+export default Query;

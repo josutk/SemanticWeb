@@ -1,106 +1,81 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import QueryUtils from '../utils/Utils';
-import RenderUtils from '../utils/RenderUtils';
+import Query from '../utils/Query';
+import Render from '../utils/Render';
+import Indicators from '../utils/Indicators';
 
 class SingleOffer extends Component {
     constructor(props) {
         super(props);
-        this.state = {base_info: null,
-                      room_info: null,
-                      ext_indicator: null
+        this.state = {info: null,
+                      rooms: null,
+                      indicators: null,
+                      test: null
                     };
 
+        this.query = new Query();
+        this._render = new Render();
     }
 
     componentDidMount(){
-        var query_utils = new QueryUtils();
+
         var id = this.context.router.route.match.params.id;
-        const base_request = query_utils.makeRequest("base_info", id)
-        const room_request = query_utils.makeRequest("room_info", id)
-        const ext_indicator_request = query_utils.makeRequest("ext_indicator_info", id)
+        const base_request = this.query.mountQuery("base_info", id)
+        const room_request = this.query.mountQuery("room_info", id)
+        const indicators_request = this.query.mountQuery("indicators_info", id)
 
         //Get base infos
         base_request.then(
             response => {
-                for (var data of response.data.results.bindings) {
-                    var type = data.home_type.value.split("/");
-                    type = type[type.length -1];
-
-                    var info = {
-                        type: type,
-                        measurement: data.home_measurement.value,
-                        country: data.location_countryName.value,
-                        state: data.location_stateName.value,
-                        city: data.location_cityName.value,
-                        cep: data.location_cep.value,
-                        latitude: data.location_latitude.value,
-                        longitude: data.location_longitude.value
-
-                    }
-                    this.setState({base_info: info})
-                }
+                this.setState({info:response.data.results.bindings[0]});
             }
-        )
+        );
 
         //Get room infos
-        var rooms = []
         room_request.then(
             response => {
-                for (var data of response.data.results.bindings) {
-                    var room = {
-                        name: data.home_room_name.value
-                    }
-                    rooms.push(room)
-                }
-                this.setState({room_info: rooms})
+                this.setState({rooms: response.data.results.bindings});
             }
         )
 
         //Get external indicators infos
-        var ext_indicators = []
-        ext_indicator_request.then(
+        indicators_request.then(
             response => {
-                for (var data of response.data.results.bindings) {
-                    var type = data.ext_indicator_parent_type.value.split("/");
-                    type = type[type.length -1];
-
-                    var name = data.ext_indicator.value.split("/");
-                    name = name[name.length -1];
-
-                    var ext_indicator = {
-                        type: type,
-                        name: name
-                    }
-                    ext_indicators.push(ext_indicator)
-                }
-                this.setState({ext_indicator: ext_indicators});
+                this.setState({indicators: response.data.results.bindings});
             }
         );
     }
 
-    render() {
-        const info = this.state.base_info;
-        const room = this.state.room_info;
-        const ext_indicators = this.state.ext_indicator;
-        const offer = this.context.router.route.location.state.offer;
-        var render_utils = new RenderUtils();
 
-        if (info == null || ext_indicators == null) {
+    render() {
+        const offer = this.context.router.route.location.state.offer;
+        const info = this.state.info;
+        const rooms = this.state.rooms;
+        const indicators = this.state.indicators;
+
+
+        if (info == null || indicators == null || rooms == null) {
             return null;
         } else {
+            var home_type = info.type.value.split("/")
+            home_type = home_type[home_type.length -1];
+
+            var indic = new Indicators(indicators[0]);
+
+
             return (
                 <div>
-                    <h1>{offer.title}</h1>
-                    <p>Apenas {offer.price} - {offer.currency}</p>
-                    <img src={offer.thumbnail} alt="home-thumbnail"/>
+                    <h1>{offer.title.value}</h1>
+                    <p>Apenas {offer.price.value} - {offer.currency.value}</p>
+                    <img src={offer.thumbnail.value} alt="home-thumbnail"/>
 
-                    <h3>Tipo:{info.type}</h3>
-                    <h3>Tamanho:{info.measurement} m²</h3>
-                    <h3>{info.city} - {info.state}</h3>
-                    <h3>Coordenadas:{info.latitude}, {info.longitude}</h3>
+                    <h3>Tipo:{home_type}</h3>
+                    <h3>Tamanho:{info.measurement.value} m²</h3>
+                    <h3>{info.city.value} - {info.state.value}</h3>
+                    <h3>Coordenadas:{info.latitude.value}, {info.longitude.value}</h3>
 
-                    {render_utils.renderExternalIndicators(ext_indicators)}
+                    {this._render.rooms(rooms)}
+                    {indic.render()}
                 </div>
             );
         }
